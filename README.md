@@ -11,8 +11,10 @@ Quy trình xây dựng ứng dụng trên MIT App Inventor tuân thủ chặt ch
 
 ### BƯỚC 1: KHỞI TẠO DỰ ÁN VÀ CẤU TRÚC MÀN HÌNH
 1. Truy cập vào trang web [appinventor.mit.edu](https://appinventor.mit.edu), chọn **Create Apps!** và đăng nhập bằng tài khoản Google.
-2. Chọn **Projects** $\rightarrow$ **Start new project**, đặt tên dự án là `BaiTapLon_MIT`.
-3. Mặc định hệ thống sẽ tạo sẵn màn hình đầu tiên là **Screen1**. Để tạo thêm các màn hình theo yêu cầu đề bài, nhấn nút **Add Screen** ở thanh công cụ phía trên:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/2c76281d-9875-4700-b2a1-d222529eca00" />
+
+3. Chọn **Projects** $\rightarrow$ **Start new project**, đặt tên dự án là `BaiTapLon_DIDong`.
+4. Mặc định hệ thống sẽ tạo sẵn màn hình đầu tiên là **Screen1**. Để tạo thêm các màn hình theo yêu cầu đề bài, nhấn nút **Add Screen** ở thanh công cụ phía trên:
    * Tạo thêm **Screen2** (Màn hình giải toán).
    * Tạo thêm **Screen3** (Màn hình hiển thị Web).
 
@@ -22,11 +24,15 @@ Quy trình xây dựng ứng dụng trên MIT App Inventor tuân thủ chặt ch
 
 #### 1. Cấu hình Screen1: Giao diện Giới thiệu bản thân (About Me)
 * **Thành phần kéo thả:**
-  * Từ mục *User Interface*, kéo 1 `Label` vào màn hình. Sửa thuộc tính `Text` tại bảng Properties bên phải thành: `"Họ và tên: Luông Ngọc Nam - MSV: ... - Chuyên ngành: Kỹ thuật Máy tính"`.
+  * Từ mục *User Interface*, kéo 1 `Label` vào màn hình. Sửa thuộc tính `Text` tại bảng Properties bên phải thành: `"LươngNgọcNam_
   * Từ mục *Layout*, kéo 1 `HorizontalArrangement` (Khung ngang) vào để chứa các nút bấm nằm kề nhau.
   * Kéo 2 `Button` đặt vào bên trong khung ngang vừa tạo.
+  <img width="1919" height="1079" alt="Screenshot 2026-06-07 173433" src="https://github.com/user-attachments/assets/cbff4c23-9b75-4fe4-ad33-81586b324e25" />
+
 * **Thay đổi thuộc tính (Properties):**
   * Chọn Button thứ nhất: Đổi tên thành `btnGoToMath` (bằng nút *Rename* phía dưới bảng Components). Sửa thuộc tính `Text` thành `"Giải Toán"`, thuộc tính `BackgroundColor` thành màu Xanh.
+  <img width="1909" height="1079" alt="Screenshot 2026-06-07 173711" src="https://github.com/user-attachments/assets/6ef2eac8-578a-4b51-8381-118a7b55af31" />
+
   * Chọn Button thứ hai: Đổi tên thành `btnGoToWeb`. Sửa thuộc tính `Text` thành `"Xem Web"`, thuộc tính `BackgroundColor` thành màu Đỏ.
 
 #### 2. Cấu hình Screen2: Giao diện Giải toán đơn giản ($ax + b = 0$)
@@ -35,11 +41,13 @@ Quy trình xây dựng ứng dụng trên MIT App Inventor tuân thủ chặt ch
   * Kéo 2 thành phần `TextBox` từ mục *User Interface* vào màn hình để người dùng nhập hệ số.
   * Kéo 1 `Button` dùng để kích hoạt lệnh tính toán.
   * Kéo 1 `Label` dùng để hiển thị kết quả đầu ra.
+    
 * **Thay đổi thuộc tính (Properties):**
   * `TextBox1`: Đổi tên thành `txtA`. Sửa thuộc tính `Hint` thành `"Nhập hệ số a"`. Tích chọn thuộc tính `NumbersOnly` (Chỉ cho nhập số).
   * `TextBox2`: Đổi tên thành `txtB`. Sửa thuộc tính `Hint` thành `"Nhập hệ số b"`. Tích chọn thuộc tính `NumbersOnly`.
   * `Button1`: Đổi tên thành `btnSolve`. Sửa thuộc tính `Text` thành `"Tính Nghiệm X"`.
   * `Label1`: Đổi tên thành `lblResult`. Sửa thuộc tính `Text` thành `"Kết quả: "` và tăng `FontSize` lên `18`.
+<img width="1919" height="1079" alt="Screenshot 2026-06-07 173837" src="https://github.com/user-attachments/assets/3f523f49-678a-494d-a86c-5a5fd9d5ffcc" />
 
 #### 3. Cấu hình Screen3: Giao diện Web-View
 * Chuyển sang chọn **Screen3**.
@@ -49,6 +57,7 @@ Quy trình xây dựng ứng dụng trên MIT App Inventor tuân thủ chặt ch
   * Thành phần `WebViewer1` mặc định sẽ chiếm toàn bộ chiều rộng (`Width` = Fill parent) và chiều cao (`Height` = Fill parent) để hiển thị tối ưu giao diện điện thoại.
 
 ---
+<img width="1919" height="1079" alt="Screenshot 2026-06-07 173921" src="https://github.com/user-attachments/assets/50b8ff29-21fe-4e1f-ac0b-008bbfae4acd" />
 
 ### BƯỚC 3: LẬP TRÌNH LOGIC XỬ LÝ (BLOCKS MODE)
 
@@ -56,13 +65,22 @@ Quy trình xây dựng ứng dụng trên MIT App Inventor tuân thủ chặt ch
 
 #### 1. Viết mã xử lý cho Screen1 (Chuyển đổi màn hình)
 * Chọn nhóm lệnh `btnGoToMath` ở cột bên trái $\rightarrow$ Kéo khối sự kiện `when btnGoToMath.Click do` ra màn hình.
+<img width="1919" height="1079" alt="Screenshot 2026-06-07 174023" src="https://github.com/user-attachments/assets/a2ce1ed9-bfa7-4e2d-b32c-757b541b1e1e" />
+
 * Chọn nhóm lệnh **Built-in** $\rightarrow$ **Control** $\rightarrow$ Kéo khối `open another screen screenName` gắn vào bên trong khối `do`.
+
+<img width="1919" height="1079" alt="Screenshot 2026-06-07 174054" src="https://github.com/user-attachments/assets/2413c0af-0d49-4ed2-96a2-e5e0c6ea4a9b" />
+
 * Chọn nhóm **Built-in** $\rightarrow$ **Text** $\rightarrow$ Kéo khối chuỗi rỗng `""` gắn vào đuôi `screenName` và gõ chữ `Screen2`.
 * *Thực hiện tương tự cho nút bấm thứ hai để gọi sang Screen3.*
 
 #### 2. Viết mã thuật toán cho Screen2 (Giải phương trình $ax+b=0$)
 * Kéo khối sự kiện `when btnSolve.Click do` từ mục `btnSolve`.
+<img width="1919" height="1079" alt="Screenshot 2026-06-07 174311" src="https://github.com/user-attachments/assets/952fd992-d46c-49ae-a62b-5a560a7c6a3d" />
+
 * Sử dụng cấu trúc điều khiển rẽ nhánh bằng cách vào **Control** $\rightarrow$ Kéo khối `if - then - else` lồng vào trong.
+<img width="1919" height="1079" alt="Screenshot 2026-06-07 174352" src="https://github.com/user-attachments/assets/ce8c50df-0428-44a9-8d7f-477e71855702" />
+
 * Thiết lập các điều kiện logic toán học dựa trên các khối tại mục **Math**:
   * **Nếu (If)** `txtA.Text = 0` và `txtB.Text = 0`: 
     * Gọi lệnh `set lblResult.Text to` $\rightarrow$ Ghép chuỗi văn bản `"Phương trình vô số nghiệm"`.
@@ -70,11 +88,20 @@ Quy trình xây dựng ứng dụng trên MIT App Inventor tuân thủ chặt ch
     * Gọi lệnh `set lblResult.Text to` $\rightarrow$ Ghép chuỗi văn bản `"Phương trình vô nghiệm"`.
   * **Ngược lại (Else)** (Trường hợp $a \\neq 0$):
     * Gọi lệnh `set lblResult.Text to` $\rightarrow$ Ghép với khối phép tính toán học: `( 0 - txtB.Text ) / txtA.Text` (tương đương công thức $x = -b/a$).
+<img width="907" height="473" alt="Screenshot 2026-06-07 180333" src="https://github.com/user-attachments/assets/66137fd2-0823-41a4-827c-bcd63b8cac20" />
 
 #### 3. Viết mã xử lý cho Screen3 (Tải trang Web tự động)
 * Chọn nhóm `Screen3` ở cột bên trái $\rightarrow$ Kéo khối sự kiện khởi tạo màn hình: `when Screen3.Initialize do`.
+<img width="1021" height="823" alt="Screenshot 2026-06-07 180426" src="https://github.com/user-attachments/assets/258f376d-4cac-49da-8ace-c7cd25f36597" />
+
 * Chọn nhóm `WebViewer1` $\rightarrow$ Kéo khối hàm hành động: `call WebViewer1.GoToUrl`.
-* Chọn nhóm **Text** $\rightarrow$ Kéo khối chuỗi `""`, điền chính xác địa chỉ URL theo yêu cầu: `https://k58kmt.tdh.io.vn?masv=MÃ_SỐ_SV_CỦA_BẠN` để gắn vào tham số `url`.
+<img width="1919" height="1046" alt="Screenshot 2026-06-07 180556" src="https://github.com/user-attachments/assets/2cd7dc11-6fbd-4edf-a35a-2bb7f1984908" />
+
+* Chọn nhóm **Text** $\rightarrow$ Kéo khối chuỗi `""`, điền chính xác địa chỉ URL theo yêu cầu: `https://k58kmt.tdh.io.vn?masv=K225480106049` để gắn vào tham số `url`.
+<img width="349" height="306" alt="Screenshot 2026-06-07 180733" src="https://github.com/user-attachments/assets/5eff15c2-30ec-40b1-b342-83deac61f4f3" />
+
+<img width="1919" height="1079" alt="Screenshot 2026-06-07 181258" src="https://github.com/user-attachments/assets/17d3c365-e4ef-4819-9f6e-a56f51daf0eb" />
+
 
 ---
 
